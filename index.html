@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduJoy Kids</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-badge">E</div>
+          <div>
+            <p class="mini-title">Learning App</p>
+            <h1>EduJoy Kids</h1>
+          </div>
+        </div>
+        <nav class="topnav" aria-label="Main navigation">
+          <button class="nav-btn active" data-target="overview">Overview</button>
+          <button class="nav-btn" data-target="kindergarten">Kindergarten</button>
+          <button class="nav-btn" data-target="primary">Primary</button>
+          <button class="nav-btn" data-target="jss">JSS</button>
+          <button class="nav-btn" data-target="ss3">SS3</button>
+        </nav>
+      </header>
+
+      <main>
+        <section id="overview" class="panel active">
+          <div class="hero">
+            <div class="hero-copy">
+              <span class="tag">Learn • Play • Grow</span>
+              <h2>Fun learning for every child from Kindergarten to SS3</h2>
+              <p>
+                Explore exciting lessons in literacy, numeracy, science, creativity,
+                technology, and social studies designed to inspire curiosity and build
+                confidence.
+              </p>
+              <div class="hero-actions">
+                <button class="primary-btn" data-target="kindergarten">Start Learning</button>
+                <button class="secondary-btn" data-target="ss3">View Senior Level</button>
+              </div>
+            </div>
+
+            <div class="hero-illustration" aria-hidden="true">
+              <div class="planet"></div>
+              <div class="floating-card card-one">Math</div>
+              <div class="floating-card card-two">Science</div>
+              <div class="floating-card card-three">Reading</div>
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-box">
+              <strong>4</strong>
+              <span>Learning stages</span>
+            </div>
+            <div class="stat-box">
+              <strong>12+</strong>
+              <span>Core subjects</span>
+            </div>
+            <div class="stat-box">
+              <strong>Daily</strong>
+              <span>Challenges</span>
+            </div>
+            <div class="stat-box">
+              <strong>Fun</strong>
+              <span>Activities</span>
+            </div>
+          </div>
+
+          <div class="subject-strip" id="overviewSubjects"></div>
+        </section>
+
+        <section id="kindergarten" class="panel">
+          <div class="panel-header">
+            <div>
+              <span class="level-label">Level 1</span>
+              <h3>Kindergarten</h3>
+            </div>
+            <div class="badge badge-pink">Play & Explore</div>
+          </div>
+          <div class="cards-grid" id="kindergartenCards"></div>
+        </section>
+
+        <section id="primary" class="panel">
+          <div class="panel-header">
+            <div>
+              <span class="level-label">Level 2</span>
+              <h3>Primary School</h3>
+            </div>
+            <div class="badge badge-green">Build Basics</div>
+          </div>
+          <div class="cards-grid" id="primaryCards"></div>
+        </section>
+
+        <section id="jss" class="panel">
+          <div class="panel-header">
+            <div>
+              <span class="level-label">Level 3</span>
+              <h3>Junior Secondary (JSS)</h3>
+            </div>
+            <div class="badge badge-gold">Think Critically</div>
+          </div>
+          <div class="cards-grid" id="jssCards"></div>
+        </section>
+
+        <section id="ss3" class="panel">
+          <div class="panel-header">
+            <div>
+              <span class="level-label">Level 4</span>
+              <h3>SS3 / Senior Secondary</h3>
+            </div>
+            <div class="badge badge-blue">Prepare & Excel</div>
+          </div>
+          <div class="cards-grid" id="ss3Cards"></div>
+        </section>
+      </main>
+
+      <aside class="quiz-panel">
+        <div class="quiz-header">
+          <h4>Quick Quiz</h4>
+          <span id="quizLevelBadge">Kindergarten</span>
+        </div>
+        <div id="quizCard"></div>
+      </aside>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
