@@ -18,6 +18,10 @@
   --shadow: 0 20px 45px rgba(88, 99, 180, 0.14);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -42,11 +46,11 @@ button {
   align-items: center;
   gap: 22px;
   padding: 18px 22px;
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.82);
   border: 1px solid rgba(117, 126, 200, 0.18);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(8px);
   border-radius: 22px;
+  backdrop-filter: blur(8px);
 }
 
 .brand-wrap {
@@ -56,8 +60,8 @@ button {
 }
 
 .brand-badge {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   display: grid;
   place-items: center;
   border-radius: 14px;
@@ -70,7 +74,7 @@ button {
 
 .mini-title {
   margin: 0;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
@@ -93,10 +97,20 @@ button {
 .primary-btn,
 .secondary-btn,
 .answer-btn,
-.try-btn {
+.try-btn,
+.new-quiz-btn {
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.nav-btn:hover,
+.primary-btn:hover,
+.secondary-btn:hover,
+.answer-btn:hover,
+.try-btn:hover,
+.new-quiz-btn:hover {
+  transform: translateY(-2px);
 }
 
 .nav-btn {
@@ -113,7 +127,7 @@ button {
   box-shadow: 0 12px 25px rgba(108, 99, 255, 0.3);
 }
 
-main {
+.app-grid {
   display: grid;
   grid-template-columns: minmax(0, 2.3fr) minmax(300px, 0.9fr);
   gap: 24px;
@@ -121,14 +135,18 @@ main {
   align-items: start;
 }
 
+.main-panel {
+  min-width: 0;
+}
+
 .panel {
   display: none;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(117, 126, 200, 0.15);
-  backdrop-filter: blur(6px);
   border-radius: 26px;
   padding: 22px;
   box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
 }
 
 .panel.active {
@@ -178,7 +196,8 @@ main {
 }
 
 .primary-btn,
-.secondary-btn {
+.secondary-btn,
+.new-quiz-btn {
   padding: 14px 22px;
   border-radius: 14px;
   font-weight: 800;
@@ -190,7 +209,8 @@ main {
   box-shadow: 0 16px 30px rgba(108, 99, 255, 0.28);
 }
 
-.secondary-btn {
+.secondary-btn,
+.new-quiz-btn {
   background: #eef7ff;
   color: var(--text);
 }
@@ -199,8 +219,8 @@ main {
   position: relative;
   min-height: 280px;
   border-radius: 28px;
-  background: linear-gradient(135deg, #e0ebff, #f9e7ff 34%, #fff7d6 100%);
   overflow: hidden;
+  background: linear-gradient(135deg, #e0ebff, #f9e7ff 34%, #fff7d6 100%);
 }
 
 .planet {
@@ -226,20 +246,9 @@ main {
   color: var(--text);
 }
 
-.card-one {
-  top: 18%;
-  right: 18%;
-}
-
-.card-two {
-  bottom: 18%;
-  left: 10%;
-}
-
-.card-three {
-  top: 42%;
-  right: 10%;
-}
+.card-one { top: 18%; right: 18%; }
+.card-two { bottom: 18%; left: 10%; }
+.card-three { top: 42%; right: 10%; }
 
 .stats-grid {
   display: grid;
@@ -293,6 +302,47 @@ main {
   border-radius: 10px;
   background: #eef2ff;
 }
+
+.dashboard-row {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.mini-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(117, 126, 200, 0.12);
+  background: #fff;
+}
+
+.mini-card h4 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+}
+
+.mini-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.mini-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: #eef2ff;
+  font-size: 1.6rem;
+}
+
+.accent-purple .mini-icon { background: #f3e8ff; }
+.accent-blue .mini-icon { background: #dbeafe; }
 
 .panel-header {
   display: flex;
@@ -395,13 +445,13 @@ main {
 }
 
 .quiz-panel {
+  position: sticky;
+  top: 18px;
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(117, 126, 200, 0.15);
   border-radius: 26px;
   padding: 20px;
   box-shadow: var(--shadow);
-  position: sticky;
-  top: 18px;
 }
 
 .quiz-header {
@@ -484,7 +534,7 @@ main {
 }
 
 @media (max-width: 980px) {
-  main {
+  .app-grid {
     grid-template-columns: 1fr;
   }
 
@@ -507,11 +557,17 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .stats-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
+  .stats-grid,
+  .dashboard-row,
   .subject-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .stats-grid,
+  .dashboard-row,
+  .subject-strip {
+    grid-template-columns: 1fr;
   }
 }

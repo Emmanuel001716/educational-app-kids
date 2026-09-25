@@ -1,47 +1,42 @@
-const labels = {
-  kindergarten: 'Kindergarten',
-  primary: 'Primary School',
-  jss: 'Junior Secondary',
-  ss3: 'SS3 / Senior Secondary',
-};
-
 const levels = {
   kindergarten: {
+    label: 'Kindergarten',
     icon: '🎨',
     subjects: ['Reading', 'Counting', 'Rhymes', 'Colors', 'Shapes'],
     lessons: [
       {
         title: 'Alphabet Adventure',
-        description: 'Trace and sound out the letters A to Z with bright and playful examples.',
+        description: 'Trace and sound out letters A to Z with bright, playful examples.',
         tag: 'Literacy',
-        icon: '🔤'
+        icon: '🔤',
       },
       {
         title: 'Number Hop',
-        description: 'Learn to count objects, match numbers, and practice simple sums.',
+        description: 'Learn to count objects, match numbers, and practice simple addition.',
         tag: 'Numeracy',
-        icon: '🔢'
+        icon: '🔢',
       },
       {
         title: 'Color Splash',
-        description: 'Identify primary colors and discover items that match each color.',
+        description: 'Identify primary colors and discover items that match each hue.',
         tag: 'Creativity',
-        icon: '🌈'
+        icon: '🌈',
       },
       {
         title: 'Shape Hunt',
-        description: 'Spot circles, squares, triangles and compare shapes in daily life.',
+        description: 'Spot circles, squares, triangles, and compare shapes in daily life.',
         tag: 'Geometry',
-        icon: '🧩'
-      }
+        icon: '🧩',
+      },
     ],
     quiz: {
       question: 'Which shape looks like a pizza slice?',
       options: ['Circle', 'Triangle', 'Rectangle', 'Square'],
-      answer: 'Triangle'
-    }
+      answer: 'Triangle',
+    },
   },
   primary: {
+    label: 'Primary School',
     icon: '📘',
     subjects: ['English', 'Math', 'Science', 'Social Studies', 'ICT'],
     lessons: [
@@ -49,103 +44,105 @@ const levels = {
         title: 'Sentence Builder',
         description: 'Create correct sentences using nouns, verbs, and adjectives.',
         tag: 'English',
-        icon: '✍️'
+        icon: '✍️',
       },
       {
         title: 'Fractions Fun',
-        description: 'Learn halves, quarters, and fractions using real-life sharing.',
+        description: 'Learn halves and quarters using real-life sharing examples.',
         tag: 'Math',
-        icon: '🍕'
+        icon: '🍕',
       },
       {
         title: 'Plant Kingdom',
         description: 'Discover roots, stems, leaves, and how plants grow from seeds.',
         tag: 'Science',
-        icon: '🌱'
+        icon: '🌱',
       },
       {
         title: 'Our Community',
-        description: 'Understand rules, family roles, and social responsibilities.',
+        description: 'Understand family roles, rules, and social responsibilities.',
         tag: 'Civics',
-        icon: '🏠'
-      }
+        icon: '🏠',
+      },
     ],
     quiz: {
       question: 'Which part of the plant absorbs water from the soil?',
       options: ['Leaf', 'Flower', 'Root', 'Stem'],
-      answer: 'Root'
-    }
+      answer: 'Root',
+    },
   },
   jss: {
+    label: 'Junior Secondary',
     icon: '🧠',
     subjects: ['Grammar', 'Algebra', 'Biology', 'Geography', 'Coding'],
     lessons: [
       {
         title: 'Word Power',
-        description: 'Improve vocabulary, grammar rules, and writing skills for everyday use.',
+        description: 'Improve vocabulary, grammar rules, and writing confidence.',
         tag: 'English',
-        icon: '📚'
+        icon: '📚',
       },
       {
         title: 'Algebra Patterns',
         description: 'Solve expressions, identify variables, and simplify equations.',
         tag: 'Math',
-        icon: '📐'
+        icon: '📐',
       },
       {
         title: 'Human Body',
-        description: 'Study the systems of the body and how they work together.',
+        description: 'Study body systems and how they support life and movement.',
         tag: 'Biology',
-        icon: '🫀'
+        icon: '🫀',
       },
       {
         title: 'Mapping the World',
-        description: 'Read maps, identify continents, and locate major landmarks.',
+        description: 'Read maps, locate countries, and understand natural features.',
         tag: 'Geography',
-        icon: '🌍'
-      }
+        icon: '🌍',
+      },
     ],
     quiz: {
       question: 'In algebra, what is the variable in 3x + 5?',
       options: ['3', 'x', '5', '+'],
-      answer: 'x'
-    }
+      answer: 'x',
+    },
   },
   ss3: {
+    label: 'SS3 / Senior Secondary',
     icon: '🚀',
     subjects: ['Physics', 'Chemistry', 'Economics', 'Literature', 'Exam Prep'],
     lessons: [
       {
         title: 'Motion & Force',
-        description: 'Understand speed, force, energy, and how objects move in the world.',
+        description: 'Understand speed, force, energy, and how objects move.',
         tag: 'Physics',
-        icon: '⚙️'
+        icon: '⚙️',
       },
       {
         title: 'Atomic World',
-        description: 'Learn about atoms, molecules, reactions, and the periodic table.',
+        description: 'Learn about atoms, molecules, reactions, and part of the periodic table.',
         tag: 'Chemistry',
-        icon: '🧪'
+        icon: '🧪',
       },
       {
         title: 'Money Matters',
-        description: 'Explore budgeting, trade, needs vs wants, and financial choices.',
+        description: 'Explore budgeting, trade, scarcity, and financial decisions.',
         tag: 'Economics',
-        icon: '💰'
+        icon: '💰',
       },
       {
         title: 'Exam Strategy',
         description: 'Build revision habits, time management, and confidence for final exams.',
         tag: 'Prep',
-        icon: '✅'
-      }
+        icon: '✅',
+      },
     ],
     quiz: {
       question: 'What is the force that pulls objects toward Earth?',
       options: ['Magnetism', 'Gravity', 'Friction', 'Pressure'],
-      answer: 'Gravity'
-    }
-  }
+      answer: 'Gravity',
+    },
+  },
 };
 
 const overviewSubjects = [
@@ -153,14 +150,14 @@ const overviewSubjects = [
   { icon: '➗', label: 'Math' },
   { icon: '🔬', label: 'Science' },
   { icon: '🎶', label: 'Arts' },
-  { icon: '💻', label: 'Technology' }
+  { icon: '💻', label: 'Technology' },
 ];
 
 const cardsMap = {
   kindergarten: '#kindergartenCards',
   primary: '#primaryCards',
   jss: '#jssCards',
-  ss3: '#ss3Cards'
+  ss3: '#ss3Cards',
 };
 
 const overviewSubjectsEl = document.getElementById('overviewSubjects');
@@ -183,6 +180,7 @@ function renderOverviewSubjects() {
 function renderLessonCards(levelKey) {
   const container = document.querySelector(cardsMap[levelKey]);
   const levelData = levels[levelKey];
+
   container.innerHTML = levelData.lessons
     .map(
       (lesson) => `
@@ -202,7 +200,7 @@ function renderLessonCards(levelKey) {
 
 function renderQuiz(levelKey = 'kindergarten') {
   const levelData = levels[levelKey];
-  quizLevelBadge.textContent = labels[levelKey];
+  quizLevelBadge.textContent = levelData.label;
 
   quizCard.innerHTML = `
     <div class="quiz-box">
@@ -218,17 +216,18 @@ function renderQuiz(levelKey = 'kindergarten') {
       </div>
       <div class="quiz-footer">
         <span class="score-pill">⭐ Score: 0</span>
-        <button class="secondary-btn" id="newQuestionBtn">Next</button>
+        <button class="new-quiz-btn" id="newQuestionBtn">Next</button>
       </div>
     </div>
   `;
 
   const answerButtons = document.querySelectorAll('.answer-btn');
+  const scoreDisplay = document.querySelector('.score-pill');
+
   answerButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const selected = button.dataset.answer;
       const correct = levelData.quiz.answer;
-      const scoreDisplay = document.querySelector('.score-pill');
       let currentScore = Number(scoreDisplay.textContent.replace(/[^\d]/g, '')) || 0;
 
       answerButtons.forEach((btn) => {
@@ -248,7 +247,8 @@ function renderQuiz(levelKey = 'kindergarten') {
     });
   });
 
-  document.getElementById('newQuestionBtn').addEventListener('click', () => {
+  const nextButton = document.getElementById('newQuestionBtn');
+  nextButton.addEventListener('click', () => {
     renderQuiz(levelKey);
   });
 }
