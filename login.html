@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Learner's Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-page">
+    <div class="auth-shell">
+      <div class="auth-card">
+        <div class="auth-brand">
+          <div class="brand-mark">LH</div>
+          <div>
+            <p class="brand-tag">Learning Portal</p>
+            <h2>Learner's Hub</h2>
+          </div>
+        </div>
+
+        <div class="auth-header">
+          <span class="eyebrow">Welcome back</span>
+          <h3>Student Login</h3>
+        </div>
+
+        <form id="loginForm" class="auth-form">
+          <label>
+            <span>Email or Student ID</span>
+            <input type="text" id="studentId" placeholder="student@learnershub.com" required />
+          </label>
+
+          <label>
+            <span>Password</span>
+            <input type="password" id="password" placeholder="Enter password" required />
+          </label>
+
+          <div class="checkbox-row">
+            <label class="remember-me">
+              <input type="checkbox" />
+              <span>Remember me</span>
+            </label>
+            <a href="#">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+
+        <p class="switch-link">
+          New here? <a href="index.html">Return home</a>
+        </p>
+      </div>
+
+      <div class="auth-visual">
+        <div class="visual-bubble bubble-one">🎓</div>
+        <div class="visual-bubble bubble-two">📖</div>
+        <div class="visual-bubble bubble-three">✅</div>
+        <div class="visual-panel">
+          <p>Daily learning wins</p>
+          <h4>Build skills that last a lifetime</h4>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

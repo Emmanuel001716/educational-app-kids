@@ -3,159 +3,153 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EduJoy Kids | Learning for Every Child</title>
-    <meta
-      name="description"
-      content="EduJoy Kids is a colorful educational app for children from kindergarten to SS3 with interactive lessons and quizzes."
-    />
+    <title>Learner's Hub | Learning for Every Child</title>
+    <meta name="description" content="Learner's Hub is a colorful educational app for children from kindergarten through SS3 with interactive lessons, tests, and learning dashboards." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="page-shell">
-      <header class="topbar">
-        <div class="brand-wrap">
-          <div class="brand-badge">E</div>
+  <body class="landing-page">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand-box">
+          <div class="brand-mark">LH</div>
           <div>
-            <p class="mini-title">Learning Platform</p>
-            <h1>EduJoy Kids</h1>
+            <div class="brand-tag">Learning Platform</div>
+            <h1>Learner's Hub</h1>
           </div>
         </div>
 
-        <nav class="topnav" aria-label="Main navigation">
-          <button class="nav-btn active" data-target="overview">Overview</button>
-          <button class="nav-btn" data-target="kindergarten">KG</button>
-          <button class="nav-btn" data-target="primary">Primary</button>
-          <button class="nav-btn" data-target="jss">JSS</button>
-          <button class="nav-btn" data-target="ss3">SS3</button>
+        <nav class="main-nav">
+          <a href="#features">Features</a>
+          <a href="#levels">Levels</a>
+          <a href="#community">Community</a>
+          <a href="login.html" class="nav-link-btn primary">Login</a>
         </nav>
-      </header>
+      </div>
+    </header>
 
-      <main class="app-grid">
-        <section class="main-panel">
-          <div id="overview" class="panel active">
-            <div class="hero">
-              <div class="hero-copy">
-                <span class="tag">Learn • Play • Grow</span>
-                <h2>Fun learning for every child from Kindergarten to SS3</h2>
-                <p>
-                  A bright, engaging learning app that helps children build reading,
-                  math, science, creativity, and problem-solving skills in a safe and
-                  exciting environment.
-                </p>
-                <div class="hero-actions">
-                  <button class="primary-btn" data-target="kindergarten">Start Learning</button>
-                  <button class="secondary-btn" data-target="ss3">Senior Level</button>
-                </div>
-              </div>
+    <main>
+      <section class="hero container">
+        <div class="hero-copy">
+          <span class="tag">Learn • Play • Grow</span>
+          <h2>Smart learning for every child from Kindergarten to SS3</h2>
+          <p>
+            Learner's Hub brings together exciting lessons, guided activities, and daily
+            progress checks to help children learn confidently at every stage of school.
+          </p>
 
-              <div class="hero-illustration" aria-hidden="true">
-                <div class="planet"></div>
-                <div class="floating-card card-one">Math</div>
-                <div class="floating-card card-two">Science</div>
-                <div class="floating-card card-three">Reading</div>
-              </div>
-            </div>
-
-            <div class="stats-grid">
-              <div class="stat-box">
-                <strong>4</strong>
-                <span>Learning stages</span>
-              </div>
-              <div class="stat-box">
-                <strong>12+</strong>
-                <span>Core subjects</span>
-              </div>
-              <div class="stat-box">
-                <strong>Daily</strong>
-                <span>Challenges</span>
-              </div>
-              <div class="stat-box">
-                <strong>Fun</strong>
-                <span>Activities</span>
-              </div>
-            </div>
-
-            <div class="subject-strip" id="overviewSubjects"></div>
-
-            <div class="dashboard-row">
-              <div class="mini-card accent-purple">
-                <span class="mini-icon">🎯</span>
-                <div>
-                  <h4>Today’s Goal</h4>
-                  <p>Complete 2 lessons and 1 quiz challenge.</p>
-                </div>
-              </div>
-              <div class="mini-card accent-blue">
-                <span class="mini-icon">🏆</span>
-                <div>
-                  <h4>Progress</h4>
-                  <p>72% of this week’s learning goals achieved.</p>
-                </div>
-              </div>
-            </div>
+          <div class="hero-actions">
+            <a href="login.html" class="btn btn-primary">Get Started</a>
+            <a href="#levels" class="btn btn-secondary">Explore Levels</a>
           </div>
 
-          <section id="kindergarten" class="panel">
-            <div class="panel-header">
-              <div>
-                <span class="level-label">Level 1</span>
-                <h3>Kindergarten</h3>
-              </div>
-              <div class="badge badge-pink">Play & Explore</div>
+          <div class="mini-stats">
+            <div>
+              <strong>4</strong>
+              <span>Age groups</span>
             </div>
-            <div class="cards-grid" id="kindergartenCards"></div>
-          </section>
-
-          <section id="primary" class="panel">
-            <div class="panel-header">
-              <div>
-                <span class="level-label">Level 2</span>
-                <h3>Primary School</h3>
-              </div>
-              <div class="badge badge-green">Build Basics</div>
+            <div>
+              <strong>12+</strong>
+              <span>Subjects</span>
             </div>
-            <div class="cards-grid" id="primaryCards"></div>
-          </section>
-
-          <section id="jss" class="panel">
-            <div class="panel-header">
-              <div>
-                <span class="level-label">Level 3</span>
-                <h3>Junior Secondary</h3>
-              </div>
-              <div class="badge badge-gold">Think Critically</div>
+            <div>
+              <strong>Daily</strong>
+              <span>Challenges</span>
             </div>
-            <div class="cards-grid" id="jssCards"></div>
-          </section>
-
-          <section id="ss3" class="panel">
-            <div class="panel-header">
-              <div>
-                <span class="level-label">Level 4</span>
-                <h3>SS3 / Senior Secondary</h3>
-              </div>
-              <div class="badge badge-blue">Prepare & Excel</div>
-            </div>
-            <div class="cards-grid" id="ss3Cards"></div>
-          </section>
-        </section>
-
-        <aside class="quiz-panel">
-          <div class="quiz-header">
-            <h4>Quick Quiz</h4>
-            <span id="quizLevelBadge">Kindergarten</span>
           </div>
-          <div id="quizCard"></div>
-        </aside>
-      </main>
-    </div>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="floating-card card-one">Math</div>
+          <div class="floating-card card-two">Science</div>
+          <div class="floating-card card-three">Reading</div>
+          <div class="globe-circle"></div>
+          <div class="glow-ring"></div>
+        </div>
+      </section>
+
+      <section id="features" class="container feature-section">
+        <div class="section-heading">
+          <span class="eyebrow">Why students love it</span>
+          <h3>Everything a child needs to stay curious and confident</h3>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h4>Interactive Lessons</h4>
+            <p>Story-based learning and engaging exercises that make education feel fun.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h4>Daily Goals</h4>
+            <p>Students track improvements with small challenges and progress milestones.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🧠</div>
+            <h4>Smart Quizzes</h4>
+            <p>Short assessments that reinforce important concepts and build confidence.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">👨‍👩‍👧‍👦</div>
+            <h4>Parent & Teacher Support</h4>
+            <p>Clear learning progress to help adults support each child at home or school.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="levels" class="container levels-section">
+        <div class="section-heading">
+          <span class="eyebrow">Learning stages</span>
+          <h3>Built for age-appropriate progress</h3>
+        </div>
+
+        <div class="levels-grid">
+          <div class="level-card pink">
+            <span class="level-tag">Level 1</span>
+            <h4>Kindergarten</h4>
+            <p>Letters, counting, colors, shapes, early reading, and creativity.</p>
+          </div>
+
+          <div class="level-card green">
+            <span class="level-tag">Level 2</span>
+            <h4>Primary</h4>
+            <p>English, mathematics, science, social studies, and digital literacy.</p>
+          </div>
+
+          <div class="level-card gold">
+            <span class="level-tag">Level 3</span>
+            <h4>JSS</h4>
+            <p>Grammar, algebra, geography, biology, and deeper critical thinking.</p>
+          </div>
+
+          <div class="level-card blue">
+            <span class="level-tag">Level 4</span>
+            <h4>SS3</h4>
+            <p>Exam preparation, physics, chemistry, literature, and economic concepts.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="community" class="container community-banner">
+        <div>
+          <span class="eyebrow">A better future starts with learning</span>
+          <h3>Give every child access to quality education and joyful discovery.</h3>
+        </div>
+        <a href="login.html" class="btn btn-primary">Open Student Portal</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© 2026 Learner's Hub</p>
+        <p>Learning with joy, confidence, and purpose.</p>
+      </div>
+    </footer>
   </body>
 </html>

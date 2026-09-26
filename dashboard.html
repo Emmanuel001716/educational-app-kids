@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Learner's Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dashboard-page">
+    <div class="dashboard-shell">
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-mark">LH</div>
+          <div>
+            <p>Learner's</p>
+            <strong>Hub</strong>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="#" class="active">Overview</a>
+          <a href="#">Lessons</a>
+          <a href="#">Assignments</a>
+          <a href="#">Progress</a>
+          <a href="#">Rewards</a>
+        </nav>
+
+        <div class="sidebar-card">
+          <span>Today's target</span>
+          <strong>2 lessons</strong>
+          <small>+1 quiz challenge</small>
+        </div>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <div>
+            <span class="eyebrow">Good morning</span>
+            <h3>Welcome, Aisha!</h3>
+          </div>
+          <div class="header-actions">
+            <button class="chip-btn">SS3</button>
+            <a href="index.html" class="chip-btn ghost">Home</a>
+          </div>
+        </header>
+
+        <section class="top-cards">
+          <div class="info-card purple">
+            <span class="card-icon">📖</span>
+            <div>
+              <p>Lessons completed</p>
+              <strong>18</strong>
+            </div>
+          </div>
+
+          <div class="info-card blue">
+            <span class="card-icon">🏆</span>
+            <div>
+              <p>Current streak</p>
+              <strong>7 days</strong>
+            </div>
+          </div>
+
+          <div class="info-card green">
+            <span class="card-icon">✅</span>
+            <div>
+              <p>Quiz score</p>
+              <strong>86%</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel lesson-panel">
+            <div class="panel-header-inline">
+              <h4>Today's lessons</h4>
+              <button class="small-btn">View all</button>
+            </div>
+
+            <ul class="lesson-list">
+              <li>
+                <div>
+                  <strong>Math: Fractions</strong>
+                  <small>20 minutes</small>
+                </div>
+                <span class="status success">Done</span>
+              </li>
+
+              <li>
+                <div>
+                  <strong>Science: Plants</strong>
+                  <small>15 minutes</small>
+                </div>
+                <span class="status active">Live</span>
+              </li>
+
+              <li>
+                <div>
+                  <strong>English: Grammar</strong>
+                  <small>25 minutes</small>
+                </div>
+                <span class="status pending">Start</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="panel progress-panel">
+            <div class="panel-header-inline">
+              <h4>Progress</h4>
+              <button class="small-btn">Stats</button>
+            </div>
+
+            <div class="progress-group">
+              <label>Math</label>
+              <div class="progress-bar"><span style="width: 82%"></span></div>
+            </div>
+
+            <div class="progress-group">
+              <label>Science</label>
+              <div class="progress-bar"><span style="width: 76%"></span></div>
+            </div>
+
+            <div class="progress-group">
+              <label>Reading</label>
+              <div class="progress-bar"><span style="width: 91%"></span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bottom-grid">
+          <div class="panel">
+            <div class="panel-header-inline">
+              <h4>Upcoming activities</h4>
+              <button class="small-btn">Calendar</button>
+            </div>
+
+            <div class="activity-list">
+              <div class="activity-item">
+                <span class="dot blue"></span>
+                <div>
+                  <strong>Quiz Challenge</strong>
+                  <small>Today · 4:00 PM</small>
+                </div>
+              </div>
+
+              <div class="activity-item">
+                <span class="dot green"></span>
+                <div>
+                  <strong>Art Club</strong>
+                  <small>Tomorrow · 10:00 AM</small>
+                </div>
+              </div>
+
+              <div class="activity-item">
+                <span class="dot purple"></span>
+                <div>
+                  <strong>Parent Review</strong>
+                  <small>Friday · 2:00 PM</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel reward-panel">
+            <div class="panel-header-inline">
+              <h4>Rewards</h4>
+              <button class="small-btn">Claim</button>
+            </div>
+
+            <div class="reward-box">
+              <div class="reward-medal">🏅</div>
+              <div>
+                <strong>Silver Star</strong>
+                <p>Earned for excellent weekly progress.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
